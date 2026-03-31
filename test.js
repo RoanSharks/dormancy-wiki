@@ -1,0 +1,1 @@
+let a = document.getElementById("test").innerText = "Test successful!";

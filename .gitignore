@@ -1,0 +1,34 @@
+node_modules/
+dist/
+.env
+.env
+
+# Build output
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
+
+# Env files
+.env.*
+
+# VS Code settings
+.vscode/
+
+# Cloudflared tunnel config
+cloudflared tunnel/config.yml
+
+# Public uploads
+public/uploads/
+
+# Server data
+server/data/

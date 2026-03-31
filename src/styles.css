@@ -1,0 +1,191 @@
+/* Custom card style for wiki category cards */
+.wiki-category-card {
+  background: linear-gradient(135deg, rgba(36, 54, 80, 0.95) 60%, rgba(24, 32, 48, 0.95) 100%);
+  border-radius: 1.1rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 32, 64, 0.18), 0 1.5px 0 0 #1e293b;
+  border: 1.5px solid #334155;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.wiki-category-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 64, 128, 0.22), 0 2px 0 0 #38bdf8;
+  border-color: #38bdf8;
+}
+.wiki-category-card h2 {
+  margin-bottom: 1rem;
+}
+.wiki-category-card ul {
+  padding-left: 0;
+  margin: 0;
+}
+.wiki-category-card li {
+  list-style: none;
+}
+@keyframes fly-bird {
+  0% {
+    left: -8%;
+    opacity: 0;
+    transform: scaleY(1) scaleX(1) rotate(-6deg);
+  }
+  5% {
+    opacity: 0.7;
+  }
+  10% {
+    opacity: 1;
+    transform: scaleY(1.08) scaleX(1.04) rotate(-2deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(0.95) scaleX(1.08) rotate(2deg);
+  }
+  90% {
+    opacity: 0.7;
+    transform: scaleY(1.04) scaleX(1) rotate(0deg);
+  }
+  100% {
+    left: 108%;
+    opacity: 0;
+    transform: scaleY(1) scaleX(1) rotate(0deg);
+  }
+}
+/* Local Orbitron font-face definitions */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/Orbitron-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/Orbitron-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/Orbitron-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/Orbitron-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  background:
+    radial-gradient(circle at 78% 14%, rgba(236, 244, 255, 0.16) 0, rgba(236, 244, 255, 0.06) 9%, transparent 24%),
+    radial-gradient(circle at 16% 88%, rgba(80, 120, 180, 0.2) 0, transparent 30%),
+    linear-gradient(180deg, #04050f 0%, #060a1a 40%, #040915 76%, #02040a 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.font-title {
+  font-family: "Orbitron", sans-serif !important;
+}
+
+.star-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #fff 70%, #b6dcff 100%);
+  box-shadow: 0 0 8px 2px rgba(184, 221, 255, 0.55), 0 0 0 1.5px #b6dcff44;
+  animation-name: star-twinkle;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  width: var(--star-size, 2px) !important;
+  height: var(--star-size, 2px) !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: 1 / 1 !important;
+  border: 1px solid #e0f4ff44;
+  display: block;
+  pointer-events: none;
+}
+
+/* Meteor: head bottom left, trail top right */
+.meteor {
+  position: absolute;
+  right: -18%;
+  width: clamp(70px, 8vw, 130px);
+  height: 1.6px;
+  opacity: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(182, 220, 255, 0.48) 60%, transparent 100%);
+  filter: drop-shadow(0 0 7px rgba(184, 221, 255, 0.45));
+  transform: rotate(-60deg);
+  animation-name: meteor-slide-steep;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+main section,
+article,
+header {
+  animation: fade-up 0.65s ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes star-twinkle {
+  from {
+    opacity: 0.25;
+    transform: scale(0.92);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes meteor-slide-steep {
+  0% {
+    transform: translate(20vw, -30vh) rotate(-55deg);
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.9;
+  }
+  16% {
+    transform: translate(-60vw, 90vh) rotate(-55deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-60vw, 90vh) rotate(-55deg);
+    opacity: 0;
+  }
+}
