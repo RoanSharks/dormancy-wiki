@@ -31,4 +31,4 @@ cloudflared tunnel/config.yml
 public/uploads/
 
 # Server data
-server/data/
+server/data/users.json

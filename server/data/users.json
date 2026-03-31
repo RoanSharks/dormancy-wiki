@@ -1,0 +1,20 @@
+[
+  {
+    "username": "neikpya",
+    "password": "$2b$10$jdm4XLcX7KzvsWvT7HCh4uD2YzGEQX.HIfWTy4AsvS2tm.KB3JW/S",
+    "admin": true
+  },
+  {
+    "username": "Fatigue",
+    "password": "$2b$10$OGhaeuByz0.Vfkn6cb1XQeLSyo1jBjTTw6EkmpfY1DHnRLCkGulDO",
+    "admin": true
+  },
+  {
+    "username": "shitmaster445",
+    "password": "$2b$10$zTCJaA9FntAXCB/UB60Jwu3LLu1aWzv6JNrGdCb13a5d/6AbnaFDW"
+  },
+  {
+    "username": "hamoodi",
+    "password": "$2b$10$rox0gwbwaN32nCIYuLDSiuKHbSWx2F21CJaD414yM6b/.x35TeF2e"
+  }
+]
