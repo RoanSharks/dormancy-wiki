@@ -27,8 +27,5 @@ Thumbs.db
 # Cloudflared tunnel config
 cloudflared tunnel/config.yml
 
-# Public uploads
-public/uploads/
-
 # Server data
 server/data/users.json
